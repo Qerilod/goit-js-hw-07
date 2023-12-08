@@ -5,6 +5,7 @@ const destroyButton = controls.querySelector("[data-destroy]");
 const boxesContainer = document.querySelector("#boxes");
 
 function createBoxes(amount) {
+  destroyBoxes();
   const boxes = Array.from({ length: amount }, (_, index) => {
     const box = document.createElement("div");
     box.style.width = `${30 + index * 10}px`;
